@@ -17,11 +17,11 @@
 		repo: 'https://github.com/elunez/eladmin',
 		//定义路由别名，可以更自由的定义路由规则。 支持正则。
 		alias: {
-			'/.*/_sidebar.md': '/_sidebar.md'
+			'/.*/.*/_sidebar.md':'/.*/_sidebar.md': '/_sidebar.md'
 		 },
 		 // 加载 _sidebar.md,加载自定义侧边栏
 	    loadSidebar: true,
-		subMaxLevel: 6,
+		subMaxLevel: 4,
 		mergeNavbar: true,
 		auto2top: true,
 	    // 完整配置参数
