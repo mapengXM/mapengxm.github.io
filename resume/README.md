@@ -25,7 +25,7 @@
 - 后台相关：Spring Boot、SSM、Spring Cloud；
 - 数据库：Mysql、Oracle；
 - 数据层相关：mybatis plus 、JPA、MapStruct、Redis等；
-- 前端相关：Vue、Bootstrap、Element、Hplus 等；
+- 前端相关：Vue、Element、Bootstrap、、Hplus 等；
 - 掌握微信公众号开发、小程序开发；
 - 掌握Android相关框架/工具：OkHttp、Retrofit、AndroidAsync、RxAndroid、ButterKnife、Picasso、Fresco、GreenDAO、EventBus、Data Binding等；
 - 熟练使用IntelliJ IDEA、Android studio、VS Code、PowerDesigner 等开发工具；
@@ -38,7 +38,7 @@
 |      时间       |              公司              |    工作    | 薪资（元） |
 | :-------------: | :----------------------------: | :--------: | :--------: |
 | 2017/05-2017/07 |     重庆钜元大数据有限公司     | 项目组实习 |    1500    |
-|  2017/07-至今   | 广州港数据科技有限公司（国企） |  研发人员  |   9000+    |
+|  2017/07-至今   | 广州港数据科技有限公司（国企） |  研发人员  |   5000+    |
 
 ---
 
