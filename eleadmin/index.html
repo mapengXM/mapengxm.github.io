@@ -15,29 +15,26 @@
 	window.$docsify = {
 		name: 'eladmin开发文档',	
 		repo: 'https://github.com/elunez/eladmin',
-		// //定义路由别名，可以更自由的定义路由规则。 支持正则。
-		// alias: {
-		// 	'/.*/_sidebar.md': '/_sidebar.md'
-		//  },
+		//定义路由别名，可以更自由的定义路由规则。 支持正则。
+		alias: {
+			'/.*/_sidebar.md': '/_sidebar.md'
+		 },
 		 // 加载 _sidebar.md,加载自定义侧边栏
 	    loadSidebar: true,
-		subMaxLevel: 5,
+		subMaxLevel: 4,
 		mergeNavbar: true,
 		auto2top: true,
 	    // 完整配置参数
-	    // search: {
-	    //   placeholder: '搜索',
-	    //   noData: '找不到搜索结果!',
-	    // }
+	    search: {
+	      placeholder: '搜索',
+	      noData: '找不到搜索结果!',
+	    }
 	}
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
-
-<!-- <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-<script src="//unpkg.com/docsify-copy-code"></script> -->
-
-
+<script src="//unpkg.com/docsify-copy-code"></script>
 </body>
 </html>
