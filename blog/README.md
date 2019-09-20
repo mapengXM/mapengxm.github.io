@@ -1,383 +1,513 @@
-# Excel Plus
+### 冷冷 / pig
 
-## 它是什么?
+- 基于Spring Cloud、**OAuth2.0、Vue**的前后端分离的权限管理系统
+- 完善登录：账号密码模式、短信验证码模式、社交账号模式均整合Spring security oAuth
+- 单点登录：基于Srping security oAuth 提供单点登录接口，方便其他系统对接
+- 用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+- 机构管理：配置系统组织机构，树结构展现，可随意调整上下级。
+- 菜单管理：配置系统菜单，操作权限，按钮权限标识等。
+- 角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
+- 动态路由：基于zuul实现动态路由，后端可配置化。
+- 灰度发布：自定义ribbon路由规则匹配多版本请求。
+- 终端管理：动态配置oauth终端，后端可配置化。
+- 字典管理：对系统中经常使用的一些较为固定的数据进行维护，如：是否等。
+- 操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+- 服务限流：多种维度的流量控制（服务、IP、用户等）
+- 消息总线：配置动态实时刷新
+- 分库分表：shardingdbc分库分表策略
+- 数据权限: 使用mybatis对原查询做增强，业务代码不用控制，即可实现。
+- 文件系统: 支持FastDFS、七牛云，扩展API几行代码实现上传下载
+- 消息中心：短信、邮件模板发送，几行代码实现发送
+- 聚合文档：基于zuul实现 swagger各个模块的实现
+- 代码生成：前后端代码的生成，支持Vue
+- 缓存管理：基于Cache Cloud 保证Redis 的高可用
+- 服务监控: Spring Boot Admin
+- 分布式任务调度： 基于elastic-job的分布式任务，zookeeper做调度中心
+- zipkin链路追踪： 数据保存ELK，图形化展示
+- pinpoint链路追踪： 数据保存hbase，图形化展示
 
-`excel-plus` 是基于 [Apache POI](https://poi.apache.org/) 框架的一款扩展封装小库，让我们在开发中更快速的完成导入导出的需求。
-尽管很多人会提出 `poi` 能干这事儿为什么还要封装一层呢？
 
-`excel-plus`很大程度上简化了代码、让使用者更轻松的
-**读**、**写** Excel 文档，也不用去关心格式兼容等问题，很多时候我们在代码中会写很多的 `for` 循环，各种 `getXXXIndex`
-来获取行或列让代码变的更臃肿。多个项目之间打一枪换一个地方，代码 Copy 来 Copy 去十分凌乱，
-如果你也在开发中遇到类似的问题，那么 `excel-plus` 是你值得一试的工具。
 
-## 不是什么
+### 人人开源 / renren-fast
 
-`excel-plus` 不是万能的，比如你想合并某几列，或者让第三行的某一列设置样式或特殊格式，
-很抱歉它是做不到的，因为这让事情复杂化了，即便支持也会像原始的 POI API 一样让人痛恶。
-如果真的需要，你可能需要在网络上寻找一些 `Utils` 结尾的工具类自行编写了，祝你好运 :P
+- renren-fast是一个**轻量级**的，`前后端分离`的Java快速开发平台，能快速开发项目并交付【接私活利器】
+- 实现前后端分离，`通过token进行数据交互`，前端再也不用关注后端技术
+- 使用Spring Boot、Shiro、MyBatis、Redis、Bootstrap、Vue2.x等框架，包含：管理员列表、角色管理、菜单管理、定时任务、参数管理、代码生成器、日志管理、云存储、API模块(APP接口开发利器)、前后端分离等。
+- 灵活的`权限控制`，可控制到页面或按钮，满足绝大部分的权限需求
+- 页面交互使用**Vue2.x**，极大的提高了开发效率
+- 完善的代码生成机制，可在线生成entity、xml、dao、service、vue、sql代码，减少70%以上的开发任务
+- 引入quartz定时任务，可动态完成任务的添加、修改、删除、暂停、恢复及日志查看等功能
+- 引入API模板，根据token作为登录令牌，极大的方便了APP接口开发
+- 引入Hibernate Validator校验框架，轻松实现后端校验
+- 引入云存储服务，已支持：七牛云、阿里云、腾讯云等
+- 引入swagger文档支持，方便编写API接口文档
+- 核心框架：Spring Boot 2.0
+- 安全框架：Apache Shiro 1.4
+- 视图框架：Spring MVC 5.0
+- 持久层框架：MyBatis 3.3
+- 定时器：Quartz 2.3
+- 数据库连接池：Druid 1.0
+- 日志管理：SLF4J 1.7、Log4j
+- 页面交互：Vue2.x
 
-> 如果你在使用过程中遇到什么问题或者建议可以发一个 [issue](https://github.com/biezhi/excel-plus/issues/new) 告诉我
 
-## 特性
 
-- 基于 Java 8 开发
-- 简洁的 API 操作
-- 注解驱动
-- 高性能低损耗
-- 可配置列顺序
-- 支持按模板导出
-- 支持过滤行数据
-- 支持数据类型转换
-- 支持自定义列样式
-- 支持读取时校验
-- 支持一行代码下载 Excel 文件
-- 支持 Excel 2003、2007、CSV 格式
+- 本项目是前后端分离的，还需要部署前端，才能运行起来**(无部门)**
+- renren-fast-vue基于vue、element-ui构建开发，实现[renren-fast](https://gitee.com/renrenio/renren-fast)后台管理前端功能，提供一套更优的前端解决方案
+- 前端下载地址：<https://gitee.com/renrenio/renren-fast-vue>
+- 前端部署文档：<https://gitee.com/renrenio/renren-fast-vue/wikis/Home>
+- 前端部署完毕，就可以访问项目了，账号：admin，密码：admin
 
-# 快速开始
 
-## 引入依赖
 
-加入以下 `maven` 依赖到你的 `pom.xml` 文件中，该项目使用的 `poi` 版本是 [4.0.1](https://mvnrepository.com/artifact/org.apache.poi/poi/4.0.1)，
-如果你的项目已经存在，请注意删除或者排除依赖。
+- 数据交互
 
-```xml
-<dependency>
-    <groupId>io.github.biezhi</groupId>
-    <artifactId>excel-plus</artifactId>
-    <version>1.0.7</version>
-</dependency>
+> - 一般情况下，web项目都是通过session进行认证，每次请求数据时，都会把jsessionid放在cookie中，以便与服务端保持会话
+> - 本项目是前后端分离的，`通过token进行认证（登录时，生成唯一的token凭证），每次请求数据时，都会把token放在header中，服务端解析token，并确定用户身份及用户权限，数据通过json交互`
+
+![img](https://cdn.renren.io/b6541201803082303391694.jpg)
+
+
+
+
+
+### 老干爹 / Cloud-Admin（复杂）
+
+- Cloud-Admin是国内首个基于**Spring Cloud**微服务化开发平台，核心技术采用Spring Boot2以及Spring Cloud Gateway相关核心组件，前端采用**vue-element-admin**组件。具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理、网关API 管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。 核心技术采用`Spring Boot 2.0.1`以及`Spring Cloud (Finchley.RELEASE)`相关核心组件，采用`Consul注册中心`，前端采用`vue-element-admin`组件。
+
+- QQ群号：169824183
+
+  访问地址: [http://118.126.104.133:81](http://118.126.104.133:81/)
+
+  账号/密码：admin/admin、
+
+- 前端：
+
+  - https://gitee.com/minull/AG-Admin-v2.0
+  - vue
+
+
+
+
+### 若依
+
+- **1、系统环境**
+
+  - Java EE 8
+  - Servlet 3.0
+  - Apache Maven 3
+
+  **2、主框架**
+
+  - Spring Boot 2.0
+  - Spring Framework 5.0
+  - Apache Shiro 1.4
+
+  **3、持久层**
+
+  - Apache MyBatis 3.4
+  - Hibernate Validation 6.0
+  - Alibaba Druid 1.1
+
+  **4、视图层**
+
+  - Bootstrap 3.3
+  - Hplus 4.1
+  - Thymeleaf 3.0
+
+- 用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+
+- **部门管理**：配置系统组织机构（公司、部门、小组），树结构展现支持数据权限。
+
+- **岗位管理**：配置系统用户所属担任职务。
+
+- 菜单管理：配置系统菜单，操作权限，按钮权限标识等。
+
+- 角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
+
+- **字典管理**：对系统中经常使用的一些较为固定的数据进行维护。
+
+- **参数管理**：对系统动态配置常用参数。
+
+- **通知公告**：系统通知公告信息发布维护。
+
+- 操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+
+- **登录日志**：系统登录日志记录查询包含登录异常。
+
+- **在线用户**：当前系统中活跃用户状态监控。
+
+- 定时任务：在线（添加、修改、删除)任务调度包含执行结果日志。
+
+- 代码生成：前后端代码的生成（java、html、xml、sql)支持CRUD下载 。
+
+- 系统接口：根据业务代码自动生成相关的api接口文档。
+
+- 在线构建器：拖动表单元素生成相应的HTML代码。
+
+- 连接池监视：监视当期系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
+
+### eladmin
+
+1. 适合
+
+2. 项目基于 Spring Boot 2.1.0 、 Spring boot Jpa、 Spring Security、redis、Vue的前后端分离的权限管理系统，项目采用分模块开发方式， 权限控制采用 RBAC（Role-Based Access Control，基于角色的访问控制），支持数据字典、数据权限管理、前端菜单支持动态路由
+
+   ```
+   - 系统管理
+       - 用户管理 提供用户的相关配置
+       - 角色管理 对权限与菜单进行分配
+       - 权限管理 权限细化到接口
+       - 菜单管理 已实现菜单动态路由，后端可配置化，支持多级菜单
+       - 部门管理与岗位管理
+       - 字典管理 应广大码友的要求加入字典管理
+   - 系统监控
+       - 操作日志 使用apo记录用户操作日志
+       - 异常日志 记录操作过程中的异常，并且提供查看异常的堆栈信息
+       - 系统缓存 使用jedis将缓存操作可视化，并提供对redis的基本操作，可根据需求自行扩展
+       - 实时控制台 实时打印logback日志，来自微强迫症患者的精心配色，更好的监控系统的运行状态
+       - SQL监控 采用druid 监控数据库访问性能，默认用户名admin，密码123456
+   - 系统工具
+    - 定时任务 整合Quartz做定时任务，加入任务日志，任务运行情况一目了然
+       - 代码生成 高灵活度一键生成前后端代码，减少百分之80左右的工作任务
+       - 接口文档 使用的是 swagger-ui 
+       - 邮件工具 配合富文本，发送html格式的邮件
+       - SM.MS免费图床 挺好用的一个图床，作为公共图片上传使用
+       - 七牛云存储 这个就不多说了
+       - 支付宝支付 提供了测试账号，可自行测试
+   - 组件管理
+       - 图标库 系统图标来自 https://www.iconfont.cn/
+       - 富文本 集成wangEditor富文本
+       - Markdown编辑器与Yaml编辑器
+   ```
+
+   - 基础框架：Spring Boot 2.1.0.RELEASE
+   - 持久层框架：Spring boot Jpa
+   - 安全框架：Spring Security
+   - 缓存框架：Redis
+   - 日志打印：logback+log4jdbc
+   - 接口文档 swagger2
+   - 其他：fastjson、aop、MapStruct等
+
+3. 前端
+
+   - node
+   - vue
+   - vue-router
+   - axios
+   - element ui
+
+4. 初始模板基于`vue-admin-template`
+
+### **FEBS-Shiro**  2.0  
+
+FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot，Shiro和Layui构建。FEBS意指：**F**ast，**E**asy use，**B**eautiful和**S**afe。相信无论作为企业级应用，私活开发脚手架或者权限系统构建学习，FEBS-Shiro都会是一个不错的选择。2091
+
+| 名称           | 描述                                                         | 地址                                                    |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| FEBS-Shiro 1.x | Spring Boot 2.0.4 & Shiro1.4.0 权限管理系统（单页）。        | <https://github.com/wuyouzhuguli/FEBS-Shiro/tree/mysql> |
+| FEBS-Security  | Spring Boot 2.0.4 & Spring Security 5.0.7 权限管理系统（单页）。 | <https://github.com/wuyouzhuguli/FEBS-Security>         |
+| FEBS-Vue       | FEBS-Shiro前后端分离版本，前端架构采用Vue全家桶。            | <https://github.com/wuyouzhuguli/FEBS-Vue>              |
+
+系统功能模块组成如下所示：
+
+```
+├─系统管理
+│  ├─用户管理
+│  ├─角色管理
+│  ├─菜单管理
+│  └─部门管理
+├─系统监控
+│  ├─在线用户
+│  ├─系统日志
+│  ├─登录日志
+│  ├─Redis监控
+│  ├─Redis终端
+│  ├─请求追踪
+│  ├─系统信息
+│  │  ├─JVM信息
+│  │  ├─TOMCAT信息
+│  │  └─服务器信息
+├─任务调度
+│  ├─定时任务
+│  └─调度日志
+├─代码生成
+│  ├─生成配置
+│  ├─代码生成
+└─其他模块
+   ├─FEBS组件
+   │  ├─表单组件
+   │  ├─表单组合
+   │  ├─FEBS工具
+   │  ├─系统图标
+   │  └─其他组件
+   ├─APEX图表
+   ├─高德地图
+   └─导入导出
+
 ```
 
-也可以使用快照版本，最新的 bug 修复和功能更新都在这里
 
-```xml
-<repositories>
-    <repository>
-        <id>snapshots-repo</id>
-        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-</repositories>
 
-<dependency>
-    <groupId>io.github.biezhi</groupId>
-    <artifactId>excel-plus</artifactId>
-    <version>1.0.8-SNAPSHOT</version>
-</dependency>
-```
+1. 前后端请求参数校验
+2. 支持Excel导入导出
+3. 前端页面布局多样化，主题多样化
+4. 支持多数据源，代码生成
+5. 多Tab页面，适合企业应用
+6. 用户权限动态刷新
+7. 浏览器兼容性好，页面支持PC，Pad和移动端。
+8. 代码简单，结构清晰
 
-> **注意**：这里的版本号请使用 `maven` 仓库较新版本，可在 Github 的 README 中看到。
+后端
 
-## 读取和写入
+- [Spring Boot 2.1.3](http://spring.io/projects/spring-boot/)
+- [Mybatis-Plus](https://mp.baomidou.com/guide/)
+- [MySQL 5.7.x](https://dev.mysql.com/downloads/mysql/5.7.html#downloads),[Hikari](https://brettwooldridge.github.io/HikariCP/),[Redis](https://redis.io/)
+- [Shiro](http://shiro.apache.org/)
 
-下面是我们的 Java 模型类，用于存储 Excel 的行数据。
+前端
 
-```java
-public class Sample {
+- [Layui 2.5.4](https://www.layui.com/)
+- [Nepadmin](https://gitee.com/june000/nep-admin)
+- [formSelects 4.x 多选框](https://hnzzmsf.github.io/example/example_v4.html)
+- [eleTree 树组件](https://layuiextend.hsianglee.cn/eletree/)
+- [formSelect.js树形下拉](https://wujiawei0926.gitee.io/treeselect/docs/doc.html)
+- [Apexcharts图表](https://apexcharts.com/)
 
-    @ExcelColumn(index = 0, datePattern = "M/d/yy")
-    private LocalDate date;
+### Vhr 微人事
 
-    @ExcelColumn(index = 1)
-    private String location;
+- 4293
 
-    @ExcelColumn(index = 4)
-    private int proportion;
+微人事是一个前后端分离的人力资源管理系统，项目采用SpringBoot+Vue开发。
 
-    @ExcelColumn(index = 5)
-    private double ss;
+后端技术栈
 
-    @ExcelColumn(index = 6)
-    private BigDecimal amount;
-    
-    // getter setter 省略
-}
-```
+1.SpringBoot
+2.SpringSecurity
+3.MyBatis
+4.MySQL
 
-这是一个简单的模型类，使用 `@ExcelColumn` 来匹配 Excel 中的列关系，这个表格的数据在 [这里](https://github.com/biezhi/excel-plus/blob/v1.0/src/test/resources/SampleData.xlsx)。
+前端技术栈
 
-测试的 Excel 文档中有很多个 `Sheet`，我们只需读取名为 `SalesOrders` 的就可以了，其他的不关心。
+1.Vue
+2.ElementUI
+3.axios
+4.vue-router
 
-```java
-List<Sample> samples = Reader.create(Sample.class)
-                .from(new File("SampleData.xlsx"))
-                .sheet("SalesOrders")
-                .start(1)
-                .asList();
-```
+还有其他一些琐碎的技术就不一一列举了。
 
-这样就可以读取到了，非常简单！
+### jeecg-boot
 
-> 这里设置 `start` 为 1 的原因：
-> 1. 读取行的索引总是从 0 开始
-> 2. 这个表格中索引为 0 的行是列信息，故从索引为 1 的开始读取
+1. Github上面，非常强大
+2. Jeecg-boot 是一款基于代码生成器的智能开发平台！采用前后端分离技术:SpringBoot，Mybatis，Shiro，JWT，Vue & Ant Design。提供强大的代码生成器， 前端页面和后台代码一键生成，不需要写任何代码，保持jeecg一贯的强大，绝对是全栈开发者福音！！ JeecgBoot的宗旨是降低前后端分离的开发成本，提高UI能力的同时提高开发效率，追求更高的能力，No代码概念，一系列智能化在线开发。
+3. 后端
+   - 基础框架：Spring Boot 2.0.3.RELEASE
+   - 持久层框架：Mybatis-plus_3.0.6
+   - 安全框架：Apache Shiro 1.4.0-RC2，Jwt_3.4.1
+   - 数据库连接池：阿里巴巴Druid 1.1.10
+   - 缓存框架：redis
+   - 日志打印：logback
+   - 其他：fastjson，poi，Swagger-ui，quartz, lombok（简化代码）等。
+4. 前端
+   - [Vue 2.5.22](https://cn.vuejs.org/),[Vuex](https://vuex.vuejs.org/zh/),[Vue Router](https://router.vuejs.org/zh/)
+   - [Axios](https://github.com/axios/axios)
+   - [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
+   - [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
+   - [vue-cropper](https://github.com/xyxiao001/vue-cropper) - 头像裁剪组件
+   - [@antv/g2](https://antv.alipay.com/zh-cn/index.html) - Alipay AntV 数据可视化图表
+   - [Viser-vue](https://viserjs.github.io/docs.html#/viser/guide/installation) - antv/g2 封装实现
+   - eslint，[@vue/cli 3.2.1](https://cli.vuejs.org/zh/guide)
+   - vue-print-nb - 打印
+5. 开发环境
+   - 语言：Java 8
+   - IDE(JAVA)： Eclipse安装lombok插件 或者 IDEA
+   - IDE(前端)： WebStorm 或者 IDEA
+   - 依赖管理：Maven
+   - 数据库：MySQL5.0 & Oracle 11g
+   - 缓存：Redis
 
-接下来试试写入一个表格到磁盘上吧 :)
+6. 技术文档
 
-```java
-List<Sample> samples = new ArrayList<>();
-// 这里的数据需自行准备
-Writer.create()
-        .headerTitle("一份简单的Excel表格")
-        .withRows(samples)
-        .to(new File("sample_test.xlsx"));
-```
+- 官方文档 ： [http://jeecg-boot.mydoc.io](http://jeecg-boot.mydoc.io/)
+- 零基础入门： <http://jeecg-boot.mydoc.io/?t=344845>
+- 常见问题 ： [新手入门常见问题汇总](http://www.jeecg.org/forum.php?mod=viewthread&tid=7816&page=1&extra=#pid21237)
+- 在线演示 ： [http://boot.jeecg.org](http://boot.jeecg.org/)
+- QQ交流群 ： 284271917
+- 视频教程（视频可能有点老，以1.1文档为准） ： [![YPSuperKey Unlocked](data:image/png;base64,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)https://pan.baidu.com/s/1Il0TS50I70vH1AG1y40wtw](https://pan.baidu.com/s/1Il0TS50I70vH1AG1y40wtw) 提取码：hok5
+- Angular版本 ：[如果你更熟悉Angular，请点击这里找到jeecg-boot的对应版本](https://gitee.com/dangzhenghui/jeecg-boot)
 
-此时看看本地是否产生了一个名为 `sample_test.xlsx` 的 Excel 表格。
-
-# 进阶使用
-
-读取 Excel 文档通过 `Reader` API 来完成，你只需要创建一个 Reader 对象，就可以读取文档了。
-
-> 导入包的时候注意是 `io.github.biezhi.excel.plus.Reader`
-
-## 创建 Reader
-
-创建 Reader 的方式可以通过构造函数或者工厂方法，我们建议你这样使用：
-
-```java
-Reader.create(Sample.class);
-```
-
-这里是 `Sample.class` 是一个 Java 中的类型，它和 Excel 的行进行绑定，通过 `@ExcelColumn` 来表示列关系。
-
-## 读取指定的 Sheet
-
-有些时候在一个 Excel 文档中有多个 Sheet，默认这个库会读取第一个，也就是 `index` 为 0 的 Sheet。
-如果你想读取其他的 `excel-plus` 提供了 API 帮助你。
-
-```java
-Reader.create(Sample.class)
-      .from(new File("SampleData.xlsx"))
-      .sheet(1)
-```
-
-这样会读取 `index` 为 1 的 Sheet，如果你想按名称读取可以参考如下代码
-
-```java
-Reader.create(Sample.class)
-      .from(new File("SampleData.xlsx"))
-      .sheet("sheetName")
-```
-
-## 从指定行开始读取
-
-默认情况，`Reader` 会从索引为 2 的行开始读取，有些时候我们的表格并非有表头或者标题，所以需要重新设置开始读取的行。
-这里设置的是一个索引值，假设 Excel 中只有 2 行数据，没有其他的，那么可以这样设置：
-
-```java
-Reader.create(Sample.class)
-      .from(new File("SampleData.xlsx"))
-      .start(0)
-```
-
-如果数据行上面有一行列头显示，我们就可以从索引为 1 的行开始读取
-
-```java
-Reader.create(Sample.class)
-      .from(new File("SampleData.xlsx"))
-      .start(1)
-```
-
-## 从 InputStream 读取
-
-大多数情况下 Excel 以文件的形式存在，在某些特殊情况下可能是一个 `InputStream`，`excel-plus` 也支持从流中读取文档数据。
-但你要记住，`File` 参数形式的效率会更高，因为内部的一些判断和 POI 本身的机制导致。
-
-```java
-Reader.create(Sample.class)
-      .from(YOU_INPUT_STREAM)
-```
-
-## 读取结果过滤
-
-有时候我们需要对读取的行数据做一下过滤，这时候就可以使用 `filter` 函数来筛选出合适的数据项。
-
-```java
-List<Sample> samples = Reader.create(Sample.class)
-                .from(new File(classPath() + "/SampleData.xlsx"))
-                .sheet("SalesOrders")
-                .startRow(1)
-                .asStream()
-                .filter(sample -> sample.getAmount().intValue() > 1000)
-                .collect(toList());
+7. 功能模块
 
 ```
-
-## 读取 CSV 文档
-
-为了方便，我们也支持直接读取一份 CSV 文档，使用方式和前面没有差异，只是在 `from` 的时候文件名不同了而已。
-
----
-
-写入一份 Excel 文档通过使用 `Writer` API 来完成，创建一个 Writer 对象就可以操作 Excel 写入了。
-
-> 导入包的时候注意是 `io.github.biezhi.excel.plus.Writer`
-
-## 创建 Writer
-
-你可以通过使用构造函数的方式或者工厂方法来创建一个 Writer 对象，下面的方式更简洁：
-
-```java
-Writer.create();
+├─系统管理
+│  ├─用户管理
+│  ├─角色管理
+│  ├─菜单管理
+│  ├─权限设置（支持按钮权限、数据权限）
+│  ├─部门管理
+│  └─字典管理
+├─智能化功能
+│  ├─代码生成器功能（一键生成前后端代码，生成后无需修改直接用，绝对是后端开发福音）
+│  ├─代码生成器模板（提供4套模板，分别支持单表和一对多模型，不同风格选择）
+│  ├─代码生成器模板（生成代码，自带excel导入导出）
+│  ├─查询过滤器（查询逻辑无需编码，系统根据页面配置自动生成）
+│  ├─高级查询器（弹窗自动组合查询条件）
+│  ├─Excel导入导出工具集成（支持单表，一对多 导入导出）
+│  ├─平台移动自适应支持
+├─Online在线开发
+│  ├─Online在线表单(暂未开源)
+│  ├─Online在线图表(暂未开源)
+│  ├─Online在线报表
+│  ├─消息中心（支持短信、邮件、微信推送等等）
+├─系统监控
+│  ├─性能扫描监控
+│  │  ├─监控 Redis
+│  │  ├─Tomcat
+│  │  ├─jvm
+│  │  ├─服务器信息
+│  │  ├─请求追踪
+│  ├─定时任务
+│  ├─系统日志
+│  ├─数据日志（记录数据变更情况，可进行版本对比查看数据变更记录）
+│  ├─系统通知
+│  ├─SQL监控
+│  ├─swagger-ui(在线接口文档)
+│─报表示例
+│  ├─曲线图
+│  └─饼状图
+│  └─柱状图
+│  └─折线图
+│  └─面积图
+│  └─雷达图
+│  └─仪表图
+│  └─进度条
+│  └─排名列表
+│  └─等等
+│─常用示例
+│  ├─单表模型例子
+│  └─一对多模型例子
+│  └─打印例子
+│  └─一对多TAB例子
+│  └─内嵌table例子
+│  └─常用选择组件
+│  └─一对多JEditable
+│  └─接口模拟测试
+│  └─一对多JEditable
+│─封装通用组件	
+│  ├─行编辑表格JEditableTable
+│  └─省略显示组件
+│  └─时间控件
+│  └─高级查询
+│  └─通用选择用户组件
+│  └─通过组织机构选择用户组件
+│  └─报表组件封装
+│  └─等等组件
+│─更多页面模板
+│  ├─各种高级表单
+│  ├─各种列表效果
+│  └─结果页面
+│  └─异常页面
+│  └─个人页面
+│─流程模块功能 (暂未开源)
+│  ├─在线流程设计
+│  ├─在线表单设计
+│  └─我的任务
+│  └─历史流程
+│  └─历史流程
+│  └─流程实例管理
+│  └─流程监听管理
+│  └─流程表达式
+│  └─我发起的流程
+│  └─我的抄送
+│  └─流程委派、抄送、跳转
+│  └─。。。
+└─其他模块
+   └─更多功能开发中。。
+   
 ```
 
-默认情况下创建的 Writer 对象会写入一个 `XLSX` 格式的 Excel 文档，如果你要写入一份 `XLS` 或者 `CSV` 文档的话可以修改入参
+### fisher
 
-```java
-Writer.create(ExcelType.XLS);
-Writer.create(ExcelType.CSV);
-```
+1. github上面
 
-## 自定义写入 Sheet
+2. 基于Spring Cloud Alibaba,Oauth2,基于VUE的后台权限管理框架,集成了基于MQ的可靠消息的分布式事务解决方案，集成Caffeine和redis分布式多级缓存，集成了Skywalking的APM监控。
 
-默认写入一份 Excel 文档的 Sheet 名称是 `Sheet0`，如果你在意这个名字的话可以修改它。
+3. 技术栈
 
-```java
-Writer.create().sheet("my_sheet");
-```
+   此项目是 Spring cloud Oauth2 构建的后台管理系统，计划采用以下技术
 
-## 设置标题
+   - 注册中心：Nacos
+   - 服务网关：Spring cloud-Gateway
+   - 配置中心：Nacos
+   - 服务调用：Spring-cloud-open-Feign
+   - 负载均衡：Spring-cloud-loadbalancer
+   - 熔断降级：Sentinel
+   - 链路追踪：Skywalking
+   - 消息队列：RabbitMQ
+   - 权限认证：Spring secruity Oauth2
+   - 项目部署：Docker+Rancher+K8S
 
-设置标题是一个可选项，如果你想在写入 Excel 的时候加入一个大标题，如 “2018 年 5 月 书籍 TOP 10”。
+4. 项目结构说明 
 
-```java
-Writer.create().headerTitle("2018 年 5 月 书籍 TOP 10");
-```
+   - fisher-center Eureka服务注册中心,该工程已经删除 注册中心已替换成Nacos
+   - fisher-common 公共模块
+   - fisher-auth Oauth2 认证服务器 提供token
+   - fisher-back 后台管理模块
+   - fisher-transcation 基于mq最终一致性实现可靠消息的分布式事务方案
+     - fisher-transaction-message 独立消息服务微服务
+     - fisher-transaction-sample 基于支付宝转账的演示
+     - fisher-transaction-web消息补偿管理后台
+   - fisher-monitor Spring boot admin监控以及Skywalking监控
+   - fisher-log 日志中心模块
+   - fisher-file 文件上传服务,这个服务可以暂时不起，因为前端还没有对接
+   - fisher-gen 代码生成模块
+   - fisher-starter 自定义封装各种starer 目前封装了日志处理
+   - fisher-gateway 后端统一入口，提供动态路由，oauth2的资源服务器
 
-该标题在 Excel 文档生成后显示在第一行，自动合并为一列。
+5. 项目运行
 
-## 从指定行开始写入
+   ```
+   git clone https://github.com/fanxinglong/fisher
+   先配置数据库，然后reids，需要启动rabbitmq,启动nacos,启动sentinel
+   启动顺序：最好按顺序启动，不按顺序启动，至少要把网关放到最后启动
+   注意：Nacos先修改配置连自己本地数据库，并把nacos的配置数据库导入到自己本地数据库
+   导入之后，检查nacos各个微服务相关配置的mysql，redis,rabbitmq配置是否正确
+   fisher-auth
+   fisher-back
+   fisher-log
+   fisher-gen
+   fisher-monitor
+   fisher-transcation
+   fisher-file 
+   fisher-gateway
 
-这一选项不建议使用，默认是通过是否设置标题来计算得出的，如果你愿意中间空一些行再写入的话可以设置。
+   前端启动参照前端项目
 
-```java
-Writer.create().start(4);
-```
+   ```
 
-这将从索引为 4 的行开始写入。
+   ### hdw-dubbo
 
-## 自定义写入样式
+- hdw-dubbo微服务化开发平台，具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。
+- 核心技术采用SpringBoot、Dubbo、Mybatis、Mybatis-plus、Druid、Redis、ActiveMQ、Quartz、JWT Token等主要框架和中间件。前端采用vue-element-ui组件。
+- 前后端分离，通过token进行数据交互，可独立部署
+- 灵活的权限控制，可控制到页面或按钮，满足绝大部分的权限需求
+- 页面交互使用Vue2.x，极大的提高了开发效率
+- 完善的代码生成机制，可在线生成entity、xml、dao、service、vue、sql代码，减少70%以上的开发任务
+- 引入dubbo服务治理
+- 引入quartz定时任务，可动态完成任务的添加、修改、删除、暂停、恢复及日志查看等功能
+- 引入API模板，根据token作为登录令牌，极大的方便了APP接口开发
+- 引入Hibernate Validator校验框架，轻松实现后端校验
+- 引入swagger文档支持，方便编写API接口文档
+- 前端地址：<https://github.com/tumao2/hdw-dubbo-vue>
+- 演示地址：[http://locahost:8004](http://locahost:8004/) (账号密码：admin/123456)
 
-大多数情况下我们是无需设置样式的，在 `excel-plus` 中提供了设置表头和列的样式 API。
-在某些需求下可能需要设置字体大小、颜色、居中等，你可以像下面的代码这样干。
-如果你对样式的操作不熟悉可以参考 POI 的列设置 [文档](https://poi.apache.org/spreadsheet/quick-guide.html#Creating+Date+Cells)。
+运行项目
 
-```java
-Writer.create()
-        .headerTitle("一份自定义样式的Excel表格")
-        .withRows(buildData())
-        .titleStyle((wb, style) -> {
-            Font font = wb.createFont();
-            font.setFontHeightInPoints((short) 40);
-            font.setColor(HSSFColor.HSSFColorPredefined.RED.getIndex());
-            style.setFont(font);
-        })
-        .headerStyle((wb, style) -> {
-            Font font = wb.createFont();
-            font.setFontHeightInPoints((short) 20);
-            font.setColor(HSSFColor.HSSFColorPredefined.BLACK.getIndex());
-            style.setFont(font);
-        })
-        .cellStyle((wb, style) -> {
-            Font font = wb.createFont();
-            font.setFontHeightInPoints((short) 20);
-            font.setColor(HSSFColor.HSSFColorPredefined.BLUE.getIndex());
-            style.setFont(font);
-        })
-        .to(new File(fileName));
-```
+- 1.安装Redis、zookeeper 、ActiveMQ
+- 2.启动Redis 、zookeeper、ActiveMQ
+- 3.启动MonitorApplication
+- 4.启动UpmsServiceApplication
+- 5.等待UpmsServiceApplication完全启动后，启动UpmsWebApplication
+- 6.默认用户 用户名：admin 密码：123456
+- 7.启动前端
 
-## 通过 Servlet 下载
-
-为了方便我们将查询的数据直接输出到浏览器弹出下载，`excel-plus` 也做了一点 _手脚_ 让你一行代码就可以搞定。
-如果你使用的是基于 `servlet` 的应用可以使用如下方式。
-
-```java
-Writer.create()
-      ...
-      .to(ResponseWrapper.createXLSX(servletResponse, "xxx表格.xlsx"))
-```
-
-只需要将 `HttpServletResponse` 对象传入，并输入导出的文件名称，其他的都见鬼去吧。
-
-## 使用模板导出
-
-有时候我们需要导出的 Excel 表格样式比较复杂，可以事先设置好一个模板表格，数据为空，
-由程序向模板中填入数据，然后导出即可，这样就满足了美观的需求。
-
-```java
-Writer.create()
-        .withTemplate(classPath() + "/template.xls")
-        .withRows(buildData())
-        .to(new File(fileName));
-```
-
-> 需要注意的是这里的 `template.xls` 位于 `classpath` 路径下。
-
-# API 概览
-
-## 核心对象
-
-- `Reader`: 用于读取一份 Excel 文档
-- `Writer`: 用于写入一份 Excel 文档
-- `Converter`: 数据类型转换的顶层接口，处理自定义的读取、写入规则
-
-## Reader
-
-- `create(Class)`：创建指定类型的 Reader
-- `from(File)`：从文件中读取
-- `from(InputStream)`：从 InputStream 中读取
-- `startRow(int)`：设置从第几行开始读，索引从 0 开始
-- `sheet(int)`：要读取的 sheet 索引，默认为 0
-- `sheet(String)`：要读取的 sheet 名称，如果设置则不会根据 sheetIndex 读取
-- `asStream()`：将读取结果存储在 Stream 中返回
-- `asList()`：将读取结果存储在 List 中返回
-
-## Writer
-
-- `Writer(ExcelType)`：构造函数，写入什么类型的文件，支持 XLSX、XLS、CSV 格式
-- `withRows(Collection)`：写入的数据，该方法接收一个集合
-- `sheet(String)`：写入的 Sheet 名称，默认为 `Sheet0`
-- `startRow(int)`：从第几行开始写入，索引从 0 开始，默认是计算出的，建议不设置
-- `headerTitle(String)`：Sheet 的大标题，可选项
-- `titleStyle(BiConsumer)`：自定义标题样式
-- `headerStyle(BiConsumer)`：自定义列头样式
-- `cellStyle(BiConsumer)`：自定义行中的单元格样式
-- `withTemplate(File)`：根据模板文件创建 Excel
-- `bufferSize(int)`：写入一个 XLSX 格式的文件时缓冲大小，默认为 100，建议不修改
-- `withRaw()`：自定义写入行，启用该配置后不会根据集合数据写 Excel
-- `createRow(int)`：`withRaw` 启用后可使用该 API，用于自定义创建 `Row` 和 `Cell`
-- `to(File)`：写入 Excel 文档到文件
-- `to(OutputStream)`：写入 Excel 文档到 OutputStream
-
-## 注解使用
-
-通过使用注解来配置如何读取、写入 Excel 文档。
-
-<b>@ExcelColumn 注解</b>
-
-| 选项        | 默认值               | 描述                                                               |
-|-------------|----------------------|--------------------------------------------------------------------|
-| `index`       | `-1` | 用于标识 Excel 中的列索引，从 0 开始，该选项适用于读取或写入 Excel    |
-| `title`  | `""` | 导出 Excel 时的列名称，如：状态、姓名、手机号                        |
-| `datePattern` | `""`   | 日期格式化的 `pattern`，对 `Date`、`LocalDate`、`LocalDateTime` 生效        |
-| `converter` | `NullConverter.class` | 数据类型转换的类 Class，实现自 Converter 接口，实现类需提供无参构造函数 |
-| `width` | `-1` | 导出为 Excel 时的列宽度，建议以 `字符数 * 256` 为基准进行设置 |
-
-# 常见问题
-
-在使用过程中遇到什么问题或者建议可以发一个 [issue](https://github.com/biezhi/excel-plus/issues/new)
-
-# 版本更新
-
-<b>v1.0-SNAPSHOT</b>
-
-1. 修复性能问题
-2. 重构部分 API
-3. 简化代码
