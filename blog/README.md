@@ -1,36 +1,8 @@
 ## 脚手架
 
-### 冷冷 / pig
+### springboot项目
 
-- 基于Spring Cloud、**OAuth2.0、Vue**的前后端分离的权限管理系统
-- 完善登录：账号密码模式、短信验证码模式、社交账号模式均整合Spring security oAuth
-- 单点登录：基于Srping security oAuth 提供单点登录接口，方便其他系统对接
-- 用户管理：用户是系统操作者，该功能主要完成系统用户配置。
-- 机构管理：配置系统组织机构，树结构展现，可随意调整上下级。
-- 菜单管理：配置系统菜单，操作权限，按钮权限标识等。
-- 角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
-- 动态路由：基于zuul实现动态路由，后端可配置化。
-- 灰度发布：自定义ribbon路由规则匹配多版本请求。
-- 终端管理：动态配置oauth终端，后端可配置化。
-- 字典管理：对系统中经常使用的一些较为固定的数据进行维护，如：是否等。
-- 操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
-- 服务限流：多种维度的流量控制（服务、IP、用户等）
-- 消息总线：配置动态实时刷新
-- 分库分表：shardingdbc分库分表策略
-- 数据权限: 使用mybatis对原查询做增强，业务代码不用控制，即可实现。
-- 文件系统: 支持FastDFS、七牛云，扩展API几行代码实现上传下载
-- 消息中心：短信、邮件模板发送，几行代码实现发送
-- 聚合文档：基于zuul实现 swagger各个模块的实现
-- 代码生成：前后端代码的生成，支持Vue
-- 缓存管理：基于Cache Cloud 保证Redis 的高可用
-- 服务监控: Spring Boot Admin
-- 分布式任务调度： 基于elastic-job的分布式任务，zookeeper做调度中心
-- zipkin链路追踪： 数据保存ELK，图形化展示
-- pinpoint链路追踪： 数据保存hbase，图形化展示
-
-
-
-### 人人开源 / renren-fast
+#### 人人开源 / renren-fast
 
 - renren-fast是一个**轻量级**的，`前后端分离`的Java快速开发平台，能快速开发项目并交付【接私活利器】
 - 实现前后端分离，`通过token进行数据交互`，前端再也不用关注后端技术
@@ -52,8 +24,6 @@
 - 日志管理：SLF4J 1.7、Log4j
 - 页面交互：Vue2.x
 
-
-
 - 本项目是前后端分离的，还需要部署前端，才能运行起来**(无部门)**
 - renren-fast-vue基于vue、element-ui构建开发，实现[renren-fast](https://gitee.com/renrenio/renren-fast)后台管理前端功能，提供一套更优的前端解决方案
 - 前端下载地址：<https://gitee.com/renrenio/renren-fast-vue>
@@ -70,28 +40,7 @@
 ![img](https://cdn.renren.io/b6541201803082303391694.jpg)
 
 
-
-
-
-### 老干爹 / Cloud-Admin（复杂）
-
-- Cloud-Admin是国内首个基于**Spring Cloud**微服务化开发平台，核心技术采用Spring Boot2以及Spring Cloud Gateway相关核心组件，前端采用**vue-element-admin**组件。具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理、网关API 管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。 核心技术采用`Spring Boot 2.0.1`以及`Spring Cloud (Finchley.RELEASE)`相关核心组件，采用`Consul注册中心`，前端采用`vue-element-admin`组件。
-
-- QQ群号：169824183
-
-  访问地址: [http://118.126.104.133:81](http://118.126.104.133:81/)
-
-  账号/密码：admin/admin、
-
-- 前端：
-
-  - https://gitee.com/minull/AG-Admin-v2.0
-  - vue
-
-
-
-
-### 若依
+#### 若依
 
 - **1、系统环境**
 
@@ -149,7 +98,7 @@
 
 - 连接池监视：监视当期系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
 
-### eladmin
+#### eladmin
 
 1. 适合
 
@@ -201,7 +150,7 @@
 
 4. 初始模板基于`vue-admin-template`
 
-### **FEBS-Shiro**  2.0  
+#### **FEBS-Shiro**  2.0  
 
 FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot，Shiro和Layui构建。FEBS意指：**F**ast，**E**asy use，**B**eautiful和**S**afe。相信无论作为企业级应用，私活开发脚手架或者权限系统构建学习，FEBS-Shiro都会是一个不错的选择。2091
 
@@ -276,7 +225,7 @@ FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot�
 - [formSelect.js树形下拉](https://wujiawei0926.gitee.io/treeselect/docs/doc.html)
 - [Apexcharts图表](https://apexcharts.com/)
 
-### Vhr 微人事
+#### Vhr 微人事
 
 - 4293
 
@@ -298,7 +247,7 @@ FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot�
 
 还有其他一些琐碎的技术就不一一列举了。
 
-### jeecg-boot
+#### jeecg-boot
 
 1. Github上面，非常强大
 2. Jeecg-boot 是一款基于代码生成器的智能开发平台！采用前后端分离技术:SpringBoot，Mybatis，Shiro，JWT，Vue & Ant Design。提供强大的代码生成器， 前端页面和后台代码一键生成，不需要写任何代码，保持jeecg一贯的强大，绝对是全栈开发者福音！！ JeecgBoot的宗旨是降低前后端分离的开发成本，提高UI能力的同时提高开发效率，追求更高的能力，No代码概念，一系列智能化在线开发。
@@ -428,7 +377,78 @@ FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot�
    
 ```
 
-### fisher
+#### hdw-dubbo
+
+- hdw-dubbo微服务化开发平台，具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。
+- 核心技术采用SpringBoot、Dubbo、Mybatis、Mybatis-plus、Druid、Redis、ActiveMQ、Quartz、JWT Token等主要框架和中间件。前端采用vue-element-ui组件。
+- 前后端分离，通过token进行数据交互，可独立部署
+- 灵活的权限控制，可控制到页面或按钮，满足绝大部分的权限需求
+- 页面交互使用Vue2.x，极大的提高了开发效率
+- 完善的代码生成机制，可在线生成entity、xml、dao、service、vue、sql代码，减少70%以上的开发任务
+- 引入dubbo服务治理
+- 引入quartz定时任务，可动态完成任务的添加、修改、删除、暂停、恢复及日志查看等功能
+- 引入API模板，根据token作为登录令牌，极大的方便了APP接口开发
+- 引入Hibernate Validator校验框架，轻松实现后端校验
+- 引入swagger文档支持，方便编写API接口文档
+- 前端地址：<https://github.com/tumao2/hdw-dubbo-vue>
+- 演示地址：[http://locahost:8004](http://locahost:8004/) (账号密码：admin/123456)
+
+运行项目
+
+- 1.安装Redis、zookeeper 、ActiveMQ
+- 2.启动Redis 、zookeeper、ActiveMQ
+- 3.启动MonitorApplication
+- 4.启动UpmsServiceApplication
+- 5.等待UpmsServiceApplication完全启动后，启动UpmsWebApplication
+- 6.默认用户 用户名：admin 密码：123456
+- 7.启动前端
+
+### springcloud项目
+
+#### 冷冷 / pig
+
+- 基于Spring Cloud、**OAuth2.0、Vue**的前后端分离的权限管理系统
+- 完善登录：账号密码模式、短信验证码模式、社交账号模式均整合Spring security oAuth
+- 单点登录：基于Srping security oAuth 提供单点登录接口，方便其他系统对接
+- 用户管理：用户是系统操作者，该功能主要完成系统用户配置。
+- 机构管理：配置系统组织机构，树结构展现，可随意调整上下级。
+- 菜单管理：配置系统菜单，操作权限，按钮权限标识等。
+- 角色管理：角色菜单权限分配、设置角色按机构进行数据范围权限划分。
+- 动态路由：基于zuul实现动态路由，后端可配置化。
+- 灰度发布：自定义ribbon路由规则匹配多版本请求。
+- 终端管理：动态配置oauth终端，后端可配置化。
+- 字典管理：对系统中经常使用的一些较为固定的数据进行维护，如：是否等。
+- 操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
+- 服务限流：多种维度的流量控制（服务、IP、用户等）
+- 消息总线：配置动态实时刷新
+- 分库分表：shardingdbc分库分表策略
+- 数据权限: 使用mybatis对原查询做增强，业务代码不用控制，即可实现。
+- 文件系统: 支持FastDFS、七牛云，扩展API几行代码实现上传下载
+- 消息中心：短信、邮件模板发送，几行代码实现发送
+- 聚合文档：基于zuul实现 swagger各个模块的实现
+- 代码生成：前后端代码的生成，支持Vue
+- 缓存管理：基于Cache Cloud 保证Redis 的高可用
+- 服务监控: Spring Boot Admin
+- 分布式任务调度： 基于elastic-job的分布式任务，zookeeper做调度中心
+- zipkin链路追踪： 数据保存ELK，图形化展示
+- pinpoint链路追踪： 数据保存hbase，图形化展示
+
+#### 老干爹 / Cloud-Admin（复杂）
+
+- Cloud-Admin是国内首个基于**Spring Cloud**微服务化开发平台，核心技术采用Spring Boot2以及Spring Cloud Gateway相关核心组件，前端采用**vue-element-admin**组件。具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理、网关API 管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。 核心技术采用`Spring Boot 2.0.1`以及`Spring Cloud (Finchley.RELEASE)`相关核心组件，采用`Consul注册中心`，前端采用`vue-element-admin`组件。
+
+- QQ群号：169824183
+
+  访问地址: [http://118.126.104.133:81](http://118.126.104.133:81/)
+
+  账号/密码：admin/admin、
+
+- 前端：
+
+  - https://gitee.com/minull/AG-Admin-v2.0
+  - vue
+
+#### fisher
 
 1. github上面
 
@@ -482,36 +502,11 @@ FEBS-Shiro是一款简单高效的后台权限管理系统，使用Spring Boot�
    fisher-transcation
    fisher-file 
    fisher-gateway
-
+   
    前端启动参照前端项目
-
+   
    ```
 
-   ### hdw-dubbo
-
-- hdw-dubbo微服务化开发平台，具有统一授权、认证后台管理系统，其中包含具备用户管理、资源权限管理等多个模块，支持多业务系统并行开发，可以作为后端服务的开发脚手架。代码简洁，架构清晰，适合学习和直接项目中使用。
-- 核心技术采用SpringBoot、Dubbo、Mybatis、Mybatis-plus、Druid、Redis、ActiveMQ、Quartz、JWT Token等主要框架和中间件。前端采用vue-element-ui组件。
-- 前后端分离，通过token进行数据交互，可独立部署
-- 灵活的权限控制，可控制到页面或按钮，满足绝大部分的权限需求
-- 页面交互使用Vue2.x，极大的提高了开发效率
-- 完善的代码生成机制，可在线生成entity、xml、dao、service、vue、sql代码，减少70%以上的开发任务
-- 引入dubbo服务治理
-- 引入quartz定时任务，可动态完成任务的添加、修改、删除、暂停、恢复及日志查看等功能
-- 引入API模板，根据token作为登录令牌，极大的方便了APP接口开发
-- 引入Hibernate Validator校验框架，轻松实现后端校验
-- 引入swagger文档支持，方便编写API接口文档
-- 前端地址：<https://github.com/tumao2/hdw-dubbo-vue>
-- 演示地址：[http://locahost:8004](http://locahost:8004/) (账号密码：admin/123456)
-
-运行项目
-
-- 1.安装Redis、zookeeper 、ActiveMQ
-- 2.启动Redis 、zookeeper、ActiveMQ
-- 3.启动MonitorApplication
-- 4.启动UpmsServiceApplication
-- 5.等待UpmsServiceApplication完全启动后，启动UpmsWebApplication
-- 6.默认用户 用户名：admin 密码：123456
-- 7.启动前端
-
+   ### 
 
 ## 博客
