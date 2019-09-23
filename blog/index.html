@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>xiaoma</title>
+  <title>个人博客</title>
   <meta name="description" content="xiaomaBlog">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -13,7 +13,7 @@
     <a href="#/">新版本</a>
     <a href="#/old-version">旧版本</a>
   </nav> -->
-  <div id="app"></div>
+  <div id="app">加载中...</div>
 </body>
 
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -21,9 +21,13 @@
 <script>
   window.$docsify = {
     el: '#app',
-    repo: 'mapengxm',
+    // logo: '/_media/favicon.png :size=50',
+    name: '个人博客',
+    repo: 'https://github.com/mapengXM/mapengxm.github.io', //添加一个github的图标
     maxLevel: 4,
-    coverpage: false
+    coverpage: false,
+     themeColor: '#3F51B5',//主题颜色
+
 
   }
 </script>
