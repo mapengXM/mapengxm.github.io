@@ -4,7 +4,7 @@
 
 - 男 | 1995年08月 |户口：重庆 |入党积极分子|`两年工作经验`
 
-- 本科|重庆交通大学-- `计算机科学与技术专业`
+- 本科|重庆交通大学-- `计算机科学与技术`
 
 - 联系方式：                                                                      
 
@@ -22,14 +22,17 @@
 
 ### 专业技能
 
-- 后台相关：Spring Boot、SSM、Spring Cloud；
+- 数据建模：PowerDesigner ；
 - 数据库：Mysql、Oracle；
-- 数据层相关：mybatis plus 、JPA、MapStruct、Redis等；
-- 前端相关：Vue、Element、Bootstrap、、Hplus 等；
-- 掌握微信公众号开发、小程序开发；
-- 掌握Android相关框架/工具：OkHttp、Retrofit、AndroidAsync、RxAndroid、ButterKnife、Picasso、Fresco、GreenDAO、EventBus、Data Binding等；
-- 熟练使用IntelliJ IDEA、Android studio、VS Code、PowerDesigner 等开发工具；
+- 后台相关：Spring Boot、SSM、Shrio、Spring Security、Jwt、Quartz、等；
+- 数据层相关：Mybatis plus 、JPA、Redis、MapStruct等；
+- 前端相关：Vue、Element、Bootstrap、Hplus 、Iview、EasyUI等；
+- 开发工具：IntelliJ IDEA、VS Code、Android studio等；
+- 掌握微信公众号开发、小程序开发：Mpvue+Iview；
+- 掌握Android原生开发：OkHttp、Retrofit、AndroidAsync、RxAndroid、ButterKnife、Picasso、Fresco、GreenDAO、EventBus、Data Binding等；
+- 熟悉SpringCloud微服务开发（Eureka、Ribbon、Hystrix、Zuul、Config）；
 - 掌握 Git 与 SVN 版本管理，有团队协作经验；
+- 其他：swagger、lombok、hutool、docsify 等
 
 ---
 
