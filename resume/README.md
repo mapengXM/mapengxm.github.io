@@ -4,7 +4,7 @@
 
 - 男 | 1995年08月 |户口：重庆 |入党积极分子|`两年工作经验`
 
-- 本科|重庆交通大学-- `计算机科学与技术`
+- 本科|重庆交通大学-- `计算机科学与技术`                                       
 
 - 联系方式：                                                                      
 
@@ -31,7 +31,7 @@
 - 掌握微信公众号开发、小程序开发：Mpvue+Iview；
 - 掌握Android原生开发：OkHttp、Retrofit、AndroidAsync、RxAndroid、ButterKnife、Picasso、Fresco、GreenDAO、EventBus、Data Binding等；
 - 熟悉SpringCloud微服务开发（Eureka、Ribbon、Hystrix、Zuul、Config）；
-- 掌握 Git 与 SVN 版本管理，有团队协作经验；
+- 掌握 Git 与 SVN 版本管理工具，有团队协作经验；
 - 其他：swagger、lombok、hutool、docsify 等
 
 ---
