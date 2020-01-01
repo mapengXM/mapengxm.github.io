@@ -79,7 +79,7 @@
     <Result :visible.sync="showResult"></Result>
 
     <span class="copy-right">
-      Copyright©zhangyongfeng5350@gmail.com
+      <!-- Copyright©zhangyongfeng5350@gmail.com -->
     </span>
   </div>
 </template>
